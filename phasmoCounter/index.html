@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phasmophobia Ghost Counter</title>
+    <!-- font taken from this webiste looks nice -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- page -->
+    <div class="page">
+      <header class="site-header">
+        <h1>Ghost Encounter Counter</h1>
+        <p class="subtitle">
+          Track how many times you've run into each ghost type
+        </p>
+      </header>
+      <!-- This is a row of overall controls, above the ghost list -->
+      <div class="toolbar">
+        <span id="total-count">Total encounters: 0</span>
+        <button id="reset-btn" class="reset-button">Reset All</button>
+      </div>
+      <!-- div is emoty as all the ghosts are in a js list to make it easier -->
+      <main id="ghost-list" class="ghost-list">
+        <!-- Ghost rows get inserted here by js -->
+      </main>
+
+      <footer class="site-footer">
+        <p>Your counts are saved automatically in this browser. This is an unofficial, fan-made project. Phasmophobia and all associated assets, logos, and characters are trademarks and copyrights of Kinetic Games Limited. No copyright infringement is intended.</p>
+      </footer>
+    </div>
+
+    <!-- This loads js file. It's placed at the very end of
+       <body> so by the time this line runs, the browser has
+       already read and built all the HTML above it, so js
+       can easily find and modify things on the page. -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Inter", Arial, sans-serif;
+  color: whitesmoke;
+
+  background-image: url("background.jpg");
+  background-size: cover; /* scale image */
+  background-position: center;
+  background-attachment: fixed; /* image stays still while scroll */
+
+  min-height: 100vh; /* page background always fills at least the full screen height */
+}
+
+.page {
+  max-width: 700px; /* stops the content from stretching too wide on big screens */
+  margin: 0 auto; /* centers the .page block horizontally */
+  padding: 40px 20px;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 25px;
+  background: rgba(10, 10, 12, 0.65);
+  border-radius: 10px;
+  padding: 25px 15px;
+}
+
+.site-header h1 {
+  font-family: "Caveat", cursive; /* the spooky display font, title only */
+  font-size: 2.4rem;
+  color: #11d864;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: whitesmoke;
+  font-size: 0.95rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 12, 0.65);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.reset-button {
+  background: #3a1414;
+  color: #f2a3a3;
+  border: 1px solid #5c1f1f;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer; /* shows a hand on hover */
+  font-weight: 600;
+}
+
+.reset-button:hover {
+  background: #4a1a1a;
+}
+
+.ghost-list {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* This styles EACH ghost row. JavaScript will create a <div class="ghost-row">
+   for every ghost, so this one rule applies to all of them at once. */
+.ghost-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #130a0acd;
+  border-radius: 6px;
+}
+
+.ghost-name {
+  font-size: 1rem;
+  flex: 1; /* lets the name take up remaining space so buttons stay right-aligned */
+  margin-right: 8px;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* even spacing between the minus button, number, and plus button */
+}
+
+.count-value {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* This is the shared style for BOTH the + and - buttons */
+.counter-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: #11d864;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease; /* smooth color change on hover */
+}
+
+.counter-btn:hover {
+  background: #8be0aa;
+}
+
+.counter-btn:active {
+  background: #23934c;
+}
+
+.site-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #9a9a9a;
+}
